@@ -30,6 +30,7 @@
     "autoprefixer": "^10.4.20",
     "eslint": "^9.21.0",
     "eslint-config-next": "15.5.12",
+    "mdx": "^0.3.1",
     "postcss": "^8.5.3",
     "tailwindcss": "^3.4.17",
     "typescript": "^5.8.2"
