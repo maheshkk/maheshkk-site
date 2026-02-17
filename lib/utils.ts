@@ -1,3 +1,5 @@
+import { site } from "@/data/site";
+
 export function formatDate(input: string): string {
   return new Date(input).toLocaleDateString("en-US", {
     year: "numeric",
@@ -8,5 +10,5 @@ export function formatDate(input: string): string {
 
 export function absoluteUrl(path: string): string {
   const clean = path.startsWith("/") ? path : `/${path}`;
-  return `${process.env.NEXT_PUBLIC_SITE_URL ?? "https://maheshkk.com"}${clean}`;
+  return `${site.domain}${clean}`;
 }
