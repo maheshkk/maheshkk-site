@@ -1,0 +1,44 @@
+[
+  {
+    "id": "note-1",
+    "text": "AI is the new magic ball, but your advantage comes from disciplined iteration.",
+    "url": "https://example.com/magic-ball",
+    "source": "Other",
+    "date": "2026-02-16"
+  },
+  {
+    "id": "note-2",
+    "text": "Teams that document prompt patterns are moving faster with fewer regressions.",
+    "url": "https://example.com/prompt-patterns",
+    "source": "LinkedIn",
+    "date": "2026-01-28"
+  },
+  {
+    "id": "note-3",
+    "text": "The browser is evolving from document viewer to active workspace for AI tasks.",
+    "url": "https://example.com/browser-workspace",
+    "source": "X",
+    "date": "2026-01-14"
+  },
+  {
+    "id": "note-4",
+    "text": "Reading + building beats passive consuming in every AI learning loop.",
+    "url": "https://example.com/learning-loop",
+    "source": "Other",
+    "date": "2025-12-19"
+  },
+  {
+    "id": "note-5",
+    "text": "Privacy-first AI architecture is becoming a practical product differentiator.",
+    "url": "https://example.com/privacy-first-ai",
+    "source": "YouTube",
+    "date": "2025-11-08"
+  },
+  {
+    "id": "note-6",
+    "text": "Students who use AI to ask better questions are building stronger fundamentals.",
+    "url": "https://example.com/students-questions",
+    "source": "Other",
+    "date": "2025-10-27"
+  }
+]

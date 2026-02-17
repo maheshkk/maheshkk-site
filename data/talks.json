@@ -1,0 +1,47 @@
+[
+  {
+    "id": "talk-1",
+    "title": "Future with AI: Adapt Faster or Be Left Behind",
+    "event": "Future of Work Summit",
+    "date": "2026-02-16",
+    "tags": ["AI", "Adaptation", "Future"],
+    "takeaways": [
+      "AI is a structural shift, not a tool upgrade.",
+      "Individuals who redesign workflows with AI will lead.",
+      "Agents will become a mainstream interface layer."
+    ],
+    "youtubeId": null,
+    "url": "https://example.com/future-with-ai",
+    "featured": true
+  },
+  {
+    "id": "talk-2",
+    "title": "Building AI-Native Product Habits",
+    "event": "Product Leaders Forum",
+    "date": "2025-11-03",
+    "tags": ["Product", "AI", "Execution"],
+    "takeaways": [
+      "Ship small experiments weekly.",
+      "Treat prompts as interface design.",
+      "Measure learning velocity, not just output velocity."
+    ],
+    "youtubeId": "dQw4w9WgXcQ",
+    "url": null,
+    "featured": true
+  },
+  {
+    "id": "talk-3",
+    "title": "From XR to Agents: The Next Interface Wave",
+    "event": "Designing Tomorrow Conference",
+    "date": "2025-07-22",
+    "tags": ["XR", "Agents", "Interfaces"],
+    "takeaways": [
+      "Interface shifts usually begin as workflow shifts.",
+      "Agentic software changes who does what, not only how.",
+      "Trust signals become core UX."
+    ],
+    "youtubeId": null,
+    "url": "https://example.com/xr-to-agents",
+    "featured": true
+  }
+]
