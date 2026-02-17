@@ -7,6 +7,16 @@ import { TalkCard } from "@/components/talk-card";
 import { NotesList } from "@/components/notes-list";
 import { getFeaturedPosts, getFeaturedTalks, getNotes } from "@/lib/content";
 
+function BackToTopLink() {
+  return (
+    <div className="mt-8">
+      <Link href="/#top" className="text-sm text-ink/60 transition hover:text-ink hover:underline">
+        Back to top
+      </Link>
+    </div>
+  );
+}
+
 export default function HomePage() {
   const featuredPosts = getFeaturedPosts(3);
   const featuredTalks = getFeaturedTalks(3);
@@ -44,7 +54,7 @@ export default function HomePage() {
   return (
     <>
       <Container>
-        <section className="py-20 md:py-24">
+        <section id="top" className="scroll-mt-24 py-20 md:py-24">
           <p className="text-sm tracking-wide text-ink/65">{site.descriptor}</p>
           <h1 className="mt-4 max-w-4xl text-4xl font-medium tracking-tight text-ink md:text-6xl">
             {site.headline}
@@ -56,13 +66,13 @@ export default function HomePage() {
             products and workflows.
           </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-            <Link href="/thoughts" className="rounded-xl bg-ink px-5 py-2.5 text-sm text-white">
+            <Link href="/#thoughts" className="rounded-xl bg-ink px-5 py-2.5 text-sm text-white">
               Read My Thoughts
             </Link>
-            <Link href="/talks" className="rounded-xl border border-black/10 px-5 py-2.5 text-sm">
+            <Link href="/#talks" className="rounded-xl border border-black/10 px-5 py-2.5 text-sm">
               Watch Talks
             </Link>
-            <Link href="/about" className="rounded-xl border border-black/10 px-5 py-2.5 text-sm">
+            <Link href="/#about" className="rounded-xl border border-black/10 px-5 py-2.5 text-sm">
               About Me
             </Link>
           </div>
@@ -72,7 +82,7 @@ export default function HomePage() {
           </div>
         </section>
 
-        <section className="border-t border-black/5 py-16 md:py-20">
+        <section id="about" className="scroll-mt-24 border-t border-black/5 py-16 md:py-20">
           <div className="grid gap-8 md:grid-cols-[1.2fr_0.8fr] md:items-start">
             <div>
               <h2 className="text-2xl font-medium tracking-tight">1992: The first time I saw a computer</h2>
@@ -89,6 +99,7 @@ export default function HomePage() {
               <Link href="/about" className="mt-6 inline-block text-sm text-accent hover:underline">
                 Read the full story -&gt;
               </Link>
+              <BackToTopLink />
             </div>
             <div className="rounded-2xl border border-black/5 bg-mist p-5">
               <p className="text-xs tracking-wide text-ink/60">BASIC (1992)</p>
@@ -106,7 +117,7 @@ export default function HomePage() {
           </div>
         </section>
 
-        <section className="border-t border-black/5 py-16 md:py-20">
+        <section className="scroll-mt-24 border-t border-black/5 py-16 md:py-20">
           <h2 className="text-2xl font-medium tracking-tight">Beliefs</h2>
           <p className="mt-3 text-sm text-ink/65">
             These beliefs shape how I build and how I write.
@@ -127,9 +138,10 @@ export default function HomePage() {
           <Link href={startHereHref} className="mt-6 inline-block text-sm text-accent hover:underline">
             Start here -&gt;
           </Link>
+          <BackToTopLink />
         </section>
 
-        <section className="border-t border-black/5 py-16">
+        <section id="thoughts" className="scroll-mt-24 border-t border-black/5 py-16">
           <div className="mb-8 flex items-center justify-between">
             <h2 className="text-2xl font-medium tracking-tight">Featured Writing</h2>
             <Link href="/thoughts" className="text-sm text-accent hover:underline">
@@ -141,9 +153,10 @@ export default function HomePage() {
               <PostCard key={post.slug} post={post} />
             ))}
           </div>
+          <BackToTopLink />
         </section>
 
-        <section className="border-t border-black/5 py-16">
+        <section id="talks" className="scroll-mt-24 border-t border-black/5 py-16">
           <div className="mb-8 flex items-center justify-between">
             <h2 className="text-2xl font-medium tracking-tight">Featured Talks</h2>
             <Link href="/talks" className="text-sm text-accent hover:underline">
@@ -155,6 +168,7 @@ export default function HomePage() {
               <TalkCard key={talk.id} talk={talk} />
             ))}
           </div>
+          <BackToTopLink />
         </section>
 
         <section className="border-t border-black/5 py-16">
@@ -165,12 +179,42 @@ export default function HomePage() {
           </p>
         </section>
 
-        <section className="border-t border-black/5 py-16">
+        <section className="scroll-mt-24 border-t border-black/5 py-16">
           <h2 className="text-2xl font-medium tracking-tight">Curated Signals</h2>
           <p className="mt-3 text-sm text-ink/65">Selected notes and references, updated over time.</p>
           <div className="mt-6 max-w-3xl">
             <NotesList notes={notes} />
           </div>
+          <BackToTopLink />
+        </section>
+
+        <section id="contact" className="scroll-mt-24 border-t border-black/5 py-16">
+          <h2 className="text-2xl font-medium tracking-tight">Contact</h2>
+          <p className="mt-3 max-w-2xl text-sm leading-7 text-ink/70">
+            For talks, collaboration, or product conversations, reach out directly or use the full
+            contact page form.
+          </p>
+          <div className="mt-6 flex flex-wrap items-center gap-4 text-sm">
+            {site.contact.showEmailPublicly ? (
+              <a href={`mailto:${site.contact.email}`} className="text-accent hover:underline">
+                {site.contact.email}
+              </a>
+            ) : null}
+            {site.socials.linkedin ? (
+              <a
+                href={site.socials.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-accent hover:underline"
+              >
+                LinkedIn
+              </a>
+            ) : null}
+            <Link href="/contact" className="rounded-xl border border-black/10 px-4 py-2 hover:bg-black/5">
+              Open full contact form
+            </Link>
+          </div>
+          <BackToTopLink />
         </section>
       </Container>
 
