@@ -4,14 +4,21 @@ export const site = {
   headline: "In the AI-native era, adaptability is the ultimate advantage.",
   subheadline:
     "I write and speak about how individuals adapt to AI and how that shapes products, enterprises, and society.",
+
   domain: "https://maheshkk.com",
+
   socials: {
-    linkedin: "", // add later
-    x: "",        // add later
-    youtube: "",  // add later
-    github: "",   // add later
-    email: "",    // add later
+    linkedin: "https://www.linkedin.com/in/maheshkk",
+    x: "https://x.com/maheshkk",
+    github: "https://github.com/maheshkk",
+    youtube: "https://www.youtube.com/@techno_nerd",
   },
+
+  contact: {
+    email: "mails.mahesh@gmail.com",
+    showEmailPublicly: false,
+  },
+
   seo: {
     title: "Mahesh Kulkarni - Future with AI",
     description:

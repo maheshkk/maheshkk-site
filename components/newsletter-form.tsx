@@ -1,6 +1,10 @@
+import { site } from "@/data/site";
+
 export function NewsletterForm() {
+  const action = site.contact.email ? `mailto:${site.contact.email}` : "mailto:hello@maheshkk.com";
+
   return (
-    <form className="mt-5 flex flex-col gap-3 sm:flex-row" action="mailto:hello@maheshkk.com" method="post">
+    <form className="mt-5 flex flex-col gap-3 sm:flex-row" action={action} method="post">
       <label htmlFor="email" className="sr-only">
         Email address
       </label>

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, type FormEvent } from "react";
+import { site } from "@/data/site";
 
 export function ContactForm() {
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
@@ -81,10 +82,22 @@ export function ContactForm() {
       </button>
       <p className="text-sm text-ink/65">
         Prefer email?{" "}
-        <a className="text-accent hover:underline" href="mailto:hello@maheshkk.com">
-          hello@maheshkk.com
-        </a>
+        {site.contact.showEmailPublicly ? (
+          <a className="text-accent hover:underline" href={`mailto:${site.contact.email}`}>
+            {site.contact.email}
+          </a>
+        ) : (
+          <span>Use the form above.</span>
+        )}
       </p>
+      {site.socials.linkedin ? (
+        <p className="text-sm text-ink/65">
+          LinkedIn:{" "}
+          <a className="text-accent hover:underline" href={site.socials.linkedin} target="_blank" rel="noopener noreferrer">
+            Connect here
+          </a>
+        </p>
+      ) : null}
       {status === "success" ? <p className="text-sm text-accent">Thanks, message received.</p> : null}
       {status === "error" ? <p className="text-sm text-red-700">Something went wrong. Please email directly.</p> : null}
     </form>
